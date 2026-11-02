@@ -1,0 +1,329 @@
+/* =========================================
+   1. BASE Y HERENCIA
+   (tipografía y color general en body)
+   ========================================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f1ea;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Separación entre bloques de contenido */
+section {
+    margin-bottom: 24px;
+}
+
+/* =========================================
+   2. TIPOGRAFÍA (agrupación de selectores)
+   ========================================= */
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #5c3d1e;
+}
+
+h1 { font-size: 2.2rem; margin: 0; }
+h2 { font-size: 1.6rem; font-weight: bold; margin-top: 0; }
+h3 { font-size: 1.2rem; font-weight: normal; margin: 8px 0; }
+
+/* =========================================
+   3. CONTENEDOR PRINCIPAL (modelo de caja)
+   ========================================= */
+.sitio {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;         /* ocupa toda la altura de la pantalla */
+    background-color: #ffffff;
+}
+
+/* =========================================
+   4. CABECERA (Flexbox)
+   ========================================= */
+#encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    background-color: #e8dcc8;
+    border-bottom: 3px solid #8b5e34;
+}
+
+#encabezado p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* =========================================
+   5. DISTRIBUCIÓN EN DOS COLUMNAS (menú + contenido)
+   ========================================= */
+.contenedor {
+    display: flex;
+    flex: 1;                   /* empuja el pie al fondo de la pantalla */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;            /* centrado con márgenes laterales automáticos */
+    box-sizing: border-box;
+}
+
+.menu {
+    flex: 0 0 200px;
+}
+
+.contenido {
+    flex: 1 1 400px;
+    min-width: 0;
+}
+
+/* =========================================
+   6. NAVEGACIÓN
+   ========================================= */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 14px;
+    margin-bottom: 6px;
+    background-color: #8b5e34;
+    color: #ffffff;
+    border: 1px solid #5c3d1e;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #c28a4b;
+}
+
+.menu a:active {
+    background-color: #5c3d1e;
+}
+
+.menu a.actual {
+    background-color: #5c3d1e;
+    font-weight: bold;
+}
+
+/* =========================================
+   7. LISTAS DE CONTENIDO (distintas al menú)
+   ========================================= */
+.contenido ul {
+    list-style-type: square;
+}
+
+.contenido ol {
+    list-style-type: upper-roman;
+}
+
+.lista-errores {
+    list-style-type: disc;
+}
+
+/* =========================================
+   8. TARJETAS (Flexbox con flex-wrap)
+   ========================================= */
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.tarjeta {
+    flex: 1 1 200px;
+    padding: 12px;
+    background-color: #faf7f0;
+    border: 1px solid #c9c1b0;
+}
+
+.tarjeta img {
+    width: 100%;
+}
+
+/* Sobrescribe la herencia: tamaño de texto menor dentro de las tarjetas */
+.tarjeta p {
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* =========================================
+   9. IMÁGENES, FIGURAS Y VIDEO
+   ========================================= */
+/* La figura se ajusta al tamaño de la imagen, con el pie debajo */
+figure {
+    display: inline-block;
+    margin: 0 0 16px 0;
+}
+
+figure img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 420px;         /* evita que las fotos verticales se vean gigantes */
+}
+
+/* Dentro de las tarjetas la figura usa todo el ancho de la tarjeta */
+.tarjeta figure {
+    display: block;
+    margin: 0;
+}
+
+.tarjeta figure img {
+    width: 100%;
+    height: 260px;             
+    max-height: none;
+    object-fit: cover;         
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: center;
+    color: #666666;
+    margin-top: 6px;
+}
+
+video {
+    max-width: 100%;
+}
+
+/* =========================================
+   10. TABLAS
+   ========================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+th, td {
+    border: 1px solid #8b5e34;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #8b5e34;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+/* =========================================
+   11. FORMULARIO
+   ========================================= */
+fieldset {
+    border: 2px solid #8b5e34;
+    padding: 16px;
+}
+
+legend {
+    font-weight: bold;
+    color: #5c3d1e;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #999999;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    background-color: #fff8dc;
+    border: 2px solid #8b5e34;
+    outline: none;
+}
+
+button {
+    margin-top: 16px;
+    padding: 10px 24px;
+    background-color: #8b5e34;
+    color: #ffffff;
+    border: 1px solid #5c3d1e;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c28a4b;
+}
+
+/* =========================================
+   12. MENSAJES DE ESTADO
+   ========================================= */
+.exito {
+    padding: 12px;
+    background-color: #e3f4e3;
+    border: 1px solid #4a9d4a;
+}
+
+.error {
+    padding: 12px;
+    background-color: #fbe3e3;
+    border: 1px solid #c04040;
+}
+
+.aviso {
+    padding: 12px;
+    background-color: #fff3cd;
+    border: 1px solid #d4a017;
+}
+
+/* =========================================
+   13. PIE DE PÁGINA (Flexbox, después del contenido)
+   ========================================= */
+#pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px 20px;
+    background-color: #5c3d1e;
+    color: #ffffff;               /* sobrescribe el color heredado de body */
+}
+
+#pie p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+#pie a {
+    color: #f0d9b5;
+}

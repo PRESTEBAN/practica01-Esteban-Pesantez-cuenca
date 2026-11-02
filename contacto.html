@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Descubre Cuenca</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div class="sitio">
+    <header id="encabezado">
+        <h1>Descubre Cuenca</h1>
+        <p>Patrimonio Cultural de la Humanidad</p>
+    </header>
+
+    <div class="contenedor">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="lugares.html">Lugares</a></li>
+                <li><a href="gastronomia.html">Gastronomía</a></li>
+                <li><a href="contacto.html" class="actual">Contacto</a></li>
+                <li><a href="consultar.php">Mensajes</a></li>
+            </ul>
+        </nav>
+
+        <main class="contenido">
+        <section>
+            <h2>Contáctanos</h2>
+            <p>
+                ¿Tienes dudas sobre la ciudad, quieres sugerir un lugar o comentar algo sobre
+                este sitio? Escríbenos con el formulario y tu mensaje quedará registrado.
+            </p>
+            <p>
+                Todos los campos son <strong>obligatorios</strong>. Por favor ingresa un correo
+                válido y escribe tu mensaje con un máximo de 2000 caracteres.
+            </p>
+
+            <form action="guardar.php" method="POST">
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" name="nombre" id="nombre" maxlength="100" required>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" name="correo" id="correo" maxlength="150" required>
+
+                    <label for="asunto">Asunto</label>
+                    <input type="text" name="asunto" id="asunto" maxlength="150" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" rows="6" maxlength="2000" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>¿Qué pasa con tu mensaje?</h2>
+            <p>
+                Al enviar el formulario, el servidor revisa que los datos sean válidos y los
+                guarda en una base de datos. Luego podrás ver los mensajes registrados en la
+                sección <em>Mensajes</em> del menú.
+            </p>
+        </section>
+    </main>
+    </div>
+
+    <footer id="pie">
+        <p>Autor: Esteban Vicente Pesantez Rea</p>
+        <p><a href="mailto:epesantezr1@est.ups.edu.ec">epesantezr1@est.ups.edu.ec</a></p>
+        <p>&copy; 2026 Esteban Pesantez. Todos los derechos reservados.</p>
+    </footer>
+</div>
+</body>
+</html>
