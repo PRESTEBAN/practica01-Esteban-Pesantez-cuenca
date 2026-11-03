@@ -51,4 +51,4 @@ Tabla `mensajes`: `id` (clave primaria autoincremental), `nombre` (100), `correo
 ## Enlaces
 
 - GitHub Pages (solo HTML, sin PHP): https://presteban.github.io/practica01-Esteban-Pesantez-cuenca/
-- Video en YouTube: (pendiente)
+- Video en YouTube: https://www.youtube.com/watch?v=CI35HXtlKrE

@@ -1,7 +1,5 @@
-/* =========================================
-   1. BASE Y HERENCIA
-   (tipografía y color general en body)
-   ========================================= */
+/* 1. BASE Y HERENCIA
+(tipografía y color general en body)*/
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -21,9 +19,7 @@ section {
     margin-bottom: 24px;
 }
 
-/* =========================================
-   2. TIPOGRAFÍA (agrupación de selectores)
-   ========================================= */
+/* 2. TIPOGRAFÍA (agrupación de selectores)*/
 h1, h2, h3 {
     font-family: Georgia, "Times New Roman", serif;
     color: #5c3d1e;
@@ -33,19 +29,15 @@ h1 { font-size: 2.2rem; margin: 0; }
 h2 { font-size: 1.6rem; font-weight: bold; margin-top: 0; }
 h3 { font-size: 1.2rem; font-weight: normal; margin: 8px 0; }
 
-/* =========================================
-   3. CONTENEDOR PRINCIPAL (modelo de caja)
-   ========================================= */
+/* 3. CONTENEDOR PRINCIPAL (modelo de caja)*/
 .sitio {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;         /* ocupa toda la altura de la pantalla */
+    min-height: 100vh;         
     background-color: #ffffff;
 }
 
-/* =========================================
-   4. CABECERA (Flexbox)
-   ========================================= */
+/* 4. CABECERA (Flexbox)*/
 #encabezado {
     display: flex;
     justify-content: space-between;
@@ -62,12 +54,10 @@ h3 { font-size: 1.2rem; font-weight: normal; margin: 8px 0; }
     font-style: italic;
 }
 
-/* =========================================
-   5. DISTRIBUCIÓN EN DOS COLUMNAS (menú + contenido)
-   ========================================= */
+/* 5. DISTRIBUCIÓN EN DOS COLUMNAS (menú + contenido)*/
 .contenedor {
     display: flex;
-    flex: 1;                   /* empuja el pie al fondo de la pantalla */
+    flex: 1;                   
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
@@ -75,7 +65,7 @@ h3 { font-size: 1.2rem; font-weight: normal; margin: 8px 0; }
     padding: 20px;
     width: 100%;
     max-width: 1800px;
-    margin: 0 auto;            /* centrado con márgenes laterales automáticos */
+    margin: 0 auto;            
     box-sizing: border-box;
 }
 
@@ -88,9 +78,7 @@ h3 { font-size: 1.2rem; font-weight: normal; margin: 8px 0; }
     min-width: 0;
 }
 
-/* =========================================
-   6. NAVEGACIÓN
-   ========================================= */
+/* 6. NAVEGACIÓN */
 .menu ul {
     list-style: none;
     margin: 0;
@@ -120,9 +108,7 @@ h3 { font-size: 1.2rem; font-weight: normal; margin: 8px 0; }
     font-weight: bold;
 }
 
-/* =========================================
-   7. LISTAS DE CONTENIDO (distintas al menú)
-   ========================================= */
+/*7. LISTAS DE CONTENIDO (distintas al menú)*/
 .contenido ul {
     list-style-type: square;
 }
@@ -135,9 +121,7 @@ h3 { font-size: 1.2rem; font-weight: normal; margin: 8px 0; }
     list-style-type: disc;
 }
 
-/* =========================================
-   8. TARJETAS (Flexbox con flex-wrap)
-   ========================================= */
+/* 8. TARJETAS (Flexbox con flex-wrap)*/
 .tarjetas {
     display: flex;
     flex-wrap: wrap;
@@ -161,9 +145,7 @@ h3 { font-size: 1.2rem; font-weight: normal; margin: 8px 0; }
     color: #555555;
 }
 
-/* =========================================
-   9. IMÁGENES, FIGURAS Y VIDEO
-   ========================================= */
+/* 9. IMÁGENES, FIGURAS Y VIDEO */
 /* La figura se ajusta al tamaño de la imagen, con el pie debajo */
 figure {
     display: inline-block;
@@ -175,7 +157,7 @@ figure img {
     width: auto;
     max-width: 100%;
     height: auto;
-    max-height: 420px;         /* evita que las fotos verticales se vean gigantes */
+    max-height: 420px;         
 }
 
 /* Dentro de las tarjetas la figura usa todo el ancho de la tarjeta */
@@ -209,9 +191,7 @@ video {
     max-width: 100%;
 }
 
-/* =========================================
-   10. TABLAS
-   ========================================= */
+/* 10. TABLAS*/
 table {
     width: 100%;
     border-collapse: collapse;
@@ -234,9 +214,7 @@ th {
     overflow-x: auto;
 }
 
-/* =========================================
-   11. FORMULARIO
-   ========================================= */
+/* 11. FORMULARIO*/
 fieldset {
     border: 2px solid #8b5e34;
     padding: 16px;
@@ -284,9 +262,7 @@ button:hover {
     background-color: #c28a4b;
 }
 
-/* =========================================
-   12. MENSAJES DE ESTADO
-   ========================================= */
+/* 12. MENSAJES DE ESTADO */
 .exito {
     padding: 12px;
     background-color: #e3f4e3;
@@ -305,9 +281,7 @@ button:hover {
     border: 1px solid #d4a017;
 }
 
-/* =========================================
-   13. PIE DE PÁGINA (Flexbox, después del contenido)
-   ========================================= */
+/* 13. PIE DE PÁGINA (Flexbox, después del contenido)*/
 #pie {
     display: flex;
     justify-content: space-between;
@@ -316,7 +290,7 @@ button:hover {
     gap: 10px;
     padding: 16px 20px;
     background-color: #5c3d1e;
-    color: #ffffff;               /* sobrescribe el color heredado de body */
+    color: #ffffff;              
 }
 
 #pie p {
